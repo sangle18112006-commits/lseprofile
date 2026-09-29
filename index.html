@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSE Center - Trung tâm Khai phóng và Phát triển Kỹ năng</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="LSE Center - Trung tâm Bồi dưỡng Toán, Văn, Anh, Luyện thi Chuyên, Đại học và Phát triển Kỹ năng. Khai phóng tri thức, mở cửa tương lai.">
+    <meta name="keywords" content="LSE Center, Trung tâm Khai phóng và Phát triển Kỹ năng, Bồi dưỡng Toán Văn Anh, Luyện thi Chuyên, Luyện thi Đại học">
+    <meta name="author" content="LSE Center">
+    <link rel="canonical" href="https://lse.edu.vn/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="LSE Center - Trung tâm Khai phóng và Phát triển Kỹ năng">
+    <meta property="og:description" content="LSE Center - Trung tâm Bồi dưỡng Toán, Văn, Anh, Luyện thi Chuyên, Đại học và Phát triển Kỹ năng. Khai phóng tri thức, mở cửa tương lai.">
+    <meta property="og:image" content="https://lse.edu.vn/assets/logo.png">
+    <meta property="og:url" content="https://lse.edu.vn/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LSE Center">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/logo.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 500: '#1a365d', 600: '#152b4a', 700: '#102038', 900: '#0a1423' },
+                        gold: { 400: '#d69e2e', 500: '#b7791f', 600: '#975a16' },
+                        cream: '#fdfbf7'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-cream text-gray-800 font-sans antialiased overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300" id="header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex items-center gap-3">
+                        <img class="h-14 w-auto object-contain" src="./assets/logo.png" alt="LSE Center Logo">
+                    </a>
+                </div>
+                
+                <nav class="hidden md:flex space-x-6 lg:space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-navy-500 font-medium transition">Trang chủ</a>
+                    <a href="#about" class="text-gray-700 hover:text-navy-500 font-medium transition">Giới thiệu</a>
+                    <a href="#programs" class="text-gray-700 hover:text-navy-500 font-medium transition">Chương trình</a>
+                    <a href="#materials" class="text-gray-700 hover:text-navy-500 font-medium transition">Học liệu</a>
+                    <a href="#team" class="text-gray-700 hover:text-navy-500 font-medium transition">Đội ngũ</a>
+                    <a href="#activities" class="text-gray-700 hover:text-navy-500 font-medium transition">Hoạt động</a>
+                    <a href="#contact" class="text-gray-700 hover:text-navy-500 font-medium transition">Liên hệ</a>
+                </nav>
+                
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#register" class="bg-navy-500 text-white px-6 py-2.5 rounded-full font-medium hover:bg-navy-600 transition shadow-lg shadow-navy-500/30">
+                        Đăng ký tư vấn
+                    </a>
+                </div>
+                
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-navy-500 focus:outline-none p-2" aria-label="Menu">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#home" class="mobile-link block px-3 py-3 text-base font-medium text-gray-700 hover:text-navy-500 hover:bg-gray-50 rounded-md">Trang chủ</a>
+                <a href="#about" class="mobile-link block px-3 py-3 text-base font-medium text-gray-700 hover:text-navy-500 hover:bg-gray-50 rounded-md">Giới thiệu</a>
+                <a href="#programs" class="mobile-link block px-3 py-3 text-base font-medium text-gray-700 hover:text-navy-500 hover:bg-gray-50 rounded-md">Chương trình</a>
+                <a href="#materials" class="mobile-link block px-3 py-3 text-base font-medium text-gray-700 hover:text-navy-500 hover:bg-gray-50 rounded-md">Học liệu</a>
+                <a href="#team" class="mobile-link block px-3 py-3 text-base font-medium text-gray-700 hover:text-navy-500 hover:bg-gray-50 rounded-md">Đội ngũ</a>
+                <a href="#activities" class="mobile-link block px-3 py-3 text-base font-medium text-gray-700 hover:text-navy-500 hover:bg-gray-50 rounded-md">Hoạt động</a>
+                <a href="#contact" class="mobile-link block px-3 py-3 text-base font-medium text-gray-700 hover:text-navy-500 hover:bg-gray-50 rounded-md">Liên hệ</a>
+                <a href="#register" class="mobile-link block px-3 py-3 mt-4 text-center text-base font-medium bg-navy-500 text-white rounded-md">Đăng ký tư vấn</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-navy-900">
+            <div class="absolute inset-0 bg-navy-900 z-0">
+                <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+                <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-navy-600/50 to-transparent"></div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                    <div class="text-center lg:text-left text-white fade-in">
+                        <span class="inline-block py-1.5 px-4 rounded-full bg-gold-500/20 text-gold-400 font-semibold text-sm mb-6 uppercase tracking-wider border border-gold-500/30">
+                            LSE Center
+                        </span>
+                        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                            Khai phóng tri thức.<br>
+                            <span class="text-gold-400 mt-2 block">Mở cửa tương lai.</span>
+                        </h1>
+                        <p class="text-lg text-gray-300 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+                            Trung tâm Khai phóng và Phát triển Kỹ năng. Đồng hành cùng người học trên con đường phát triển tư duy, bứt phá điểm số và định hướng tương lai.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="#register" class="bg-gold-500 hover:bg-gold-600 text-white px-8 py-3.5 rounded-full font-semibold transition text-center shadow-lg shadow-gold-500/30">
+                                Đăng ký tư vấn
+                            </a>
+                            <a href="#programs" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-3.5 rounded-full font-semibold transition text-center backdrop-blur-sm">
+                                Khám phá chương trình
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="relative hidden lg:block fade-in delay-200">
+                        <div class="relative w-full h-[500px] flex justify-center items-center">
+                            <div class="absolute w-72 h-72 bg-gold-500/20 rounded-full blur-3xl -top-10 -right-10"></div>
+                            <div class="absolute w-72 h-72 bg-navy-500/40 rounded-full blur-3xl -bottom-10 -left-10"></div>
+                            
+                            <div class="relative z-10 transform -rotate-2 hover:rotate-0 transition duration-500">
+                                <img src="./assets/sach-nang-cao.jpg" alt="Bộ sách Nâng cao LSE" class="w-80 rounded-xl shadow-2xl border-4 border-white/10">
+                            </div>
+                            <div class="absolute z-20 bottom-5 -left-10 transform rotate-6 hover:rotate-0 transition duration-500">
+                                <img src="./assets/sach-co-ban.jpg" alt="Bộ sách Cơ bản LSE" class="w-64 rounded-xl shadow-2xl border-4 border-white/10">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+                <svg class="relative block w-full h-12 text-cream fill-current" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.06,130.83,119.29,199.19,109.11,241.64,102.73,282.72,82.35,321.39,56.44Z"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-cream">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Về LSE Center</h2>
+                    <div class="w-20 h-1 bg-gold-500 mx-auto mb-6 rounded-full"></div>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        LSE – Trung tâm Khai phóng và Phát triển Kỹ năng. Chúng tôi cam kết mang đến một môi trường giáo dục chuyên nghiệp, học thuật và hiện đại, giúp người học phát triển toàn diện.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Value 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition duration-300 fade-in delay-100">
+                        <div class="w-14 h-14 bg-navy-50 rounded-xl flex items-center justify-center mb-6 text-navy-600">
+                            <i class="fa-solid fa-book-open text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">01 — Tri thức</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Bồi dưỡng nền tảng kiến thức vững chắc, khơi dậy niềm đam mê học tập và khám phá tri thức mới.
+                        </p>
+                    </div>
+                    
+                    <!-- Value 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition duration-300 fade-in delay-200">
+                        <div class="w-14 h-14 bg-gold-50 rounded-xl flex items-center justify-center mb-6 text-gold-600">
+                            <i class="fa-solid fa-lightbulb text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">02 — Tư duy</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Khai phóng tư duy sáng tạo, phản biện. Lộ trình cá nhân hóa giúp học sinh bứt phá và nâng band điểm hiệu quả.
+                        </p>
+                    </div>
+                    
+                    <!-- Value 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition duration-300 fade-in delay-300">
+                        <div class="w-14 h-14 bg-navy-50 rounded-xl flex items-center justify-center mb-6 text-navy-600">
+                            <i class="fa-solid fa-compass text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">03 — Kỹ năng</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Đồng hành cùng học viên phát triển kỹ năng sống cốt lõi, chuẩn bị hành trang vững vàng cho tương lai.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs Section -->
+        <section id="programs" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 fade-in">
+                    <div class="max-w-2xl">
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Chương trình đào tạo</h2>
+                        <div class="w-20 h-1 bg-gold-500 mb-6 rounded-full"></div>
+                        <p class="text-gray-600 text-lg">
+                            Chuyên bồi dưỡng Toán - Văn - Anh từ Lớp 1 đến Lớp 12 & Luyện thi Chuyên/Đại học. Đội ngũ giáo viên giàu kinh nghiệm, theo sát từng học sinh.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Math -->
+                    <div class="group relative bg-cream rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-sm hover:shadow-xl fade-in">
+                        <div class="h-2 bg-navy-500 w-full"></div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-navy-900 mb-2">Toán Học</h3>
+                            <p class="text-gold-500 font-medium mb-6">Từ lớp 1 - 12</p>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fa-solid fa-check text-green-500 mr-3 text-sm"></i> Toán Cơ bản
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fa-solid fa-check text-green-500 mr-3 text-sm"></i> Toán Nâng cao
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fa-solid fa-check text-green-500 mr-3 text-sm"></i> Tư duy Logic
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <a href="#register" class="block w-full py-2 bg-navy-500 text-white text-center rounded-lg font-medium hover:bg-navy-600 transition">Tìm hiểu thêm</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Literature -->
+                    <div class="group relative bg-cream rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-sm hover:shadow-xl fade-in delay-100">
+                        <div class="h-2 bg-gold-500 w-full"></div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-navy-900 mb-2">Ngữ Văn</h3>
+                            <p class="text-gold-500 font-medium mb-6">Từ lớp 1 - 12</p>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fa-solid fa-check text-green-500 mr-3 text-sm"></i> Văn Cơ bản
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fa-solid fa-check text-green-500 mr-3 text-sm"></i> Văn Nâng cao
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fa-solid fa-check text-green-500 mr-3 text-sm"></i> Kỹ năng viết
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <a href="#register" class="block w-full py-2 bg-navy-500 text-white text-center rounded-lg font-medium hover:bg-navy-600 transition">Tìm hiểu thêm</a>
+                        </div>
+                    </div>
+                    
+                    <!-- English -->
+                    <div class="group relative bg-cream rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-sm hover:shadow-xl fade-in delay-200">
+                        <div class="h-2 bg-navy-500 w-full"></div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-navy-900 mb-2">Tiếng Anh</h3>
+                            <p class="text-gold-500 font-medium mb-6">Từ lớp 1 - 12</p>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fa-solid fa-check text-green-500 mr-3 text-sm"></i> Anh Cơ bản
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fa-solid fa-check text-green-500 mr-3 text-sm"></i> Anh Nâng cao
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fa-solid fa-check text-green-500 mr-3 text-sm"></i> Giao tiếp & Ngữ pháp
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <a href="#register" class="block w-full py-2 bg-navy-500 text-white text-center rounded-lg font-medium hover:bg-navy-600 transition">Tìm hiểu thêm</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Exam Prep -->
+                    <div class="group relative bg-cream rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-sm hover:shadow-xl fade-in delay-300">
+                        <div class="h-2 bg-gold-500 w-full"></div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-navy-900 mb-2">Luyện Thi</h3>
+                            <p class="text-gold-500 font-medium mb-6">Chuyên / Đại học</p>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fa-solid fa-check text-green-500 mr-3 text-sm"></i> Luyện thi Chuyên
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fa-solid fa-check text-green-500 mr-3 text-sm"></i> Luyện thi Đại học
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fa-solid fa-check text-green-500 mr-3 text-sm"></i> Bứt phá sau 12 tháng
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <a href="#register" class="block w-full py-2 bg-navy-500 text-white text-center rounded-lg font-medium hover:bg-navy-600 transition">Tìm hiểu thêm</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Materials (Bookshelf) Section -->
+        <section id="materials" class="py-20 bg-navy-900 text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/black-scales.png')]"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-4">Học liệu & Xuất bản phẩm</h2>
+                    <div class="w-20 h-1 bg-gold-500 mx-auto mb-6 rounded-full"></div>
+                    <p class="text-gray-300 text-lg">
+                        Hệ thống tài liệu độc quyền từ LSE Center được biên soạn bài bản, khoa học, giúp học viên dễ dàng tiếp thu và vận dụng kiến thức.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <!-- Book Set 1 -->
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-white/10 transition duration-300 fade-in delay-100 flex flex-col h-full">
+                        <div class="relative h-64 mb-6 rounded-xl overflow-hidden bg-black/20 flex items-center justify-center p-4">
+                            <img src="./assets/sach-co-ban.jpg" alt="Bộ sách Toán - Văn - Anh Cơ bản" class="max-h-full max-w-full object-contain hover:scale-105 transition duration-500">
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Bộ sách Cơ bản</h3>
+                        <p class="text-gold-400 text-sm mb-4">Toán - Văn - Anh</p>
+                        <p class="text-gray-400 text-sm flex-grow">
+                            Xây dựng nền tảng kiến thức vững chắc bám sát chương trình chuẩn. Khai phóng tri thức, mở cửa tương lai.
+                        </p>
+                    </div>
+                    
+                    <!-- Book Set 2 -->
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-white/10 transition duration-300 fade-in delay-200 flex flex-col h-full">
+                        <div class="relative h-64 mb-6 rounded-xl overflow-hidden bg-black/20 flex items-center justify-center p-4">
+                            <img src="./assets/sach-nang-cao.jpg" alt="Bộ sách Toán - Văn - Anh Nâng cao" class="max-h-full max-w-full object-contain hover:scale-105 transition duration-500">
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Bộ sách Nâng cao</h3>
+                        <p class="text-gold-400 text-sm mb-4">Toán - Văn - Anh</p>
+                        <p class="text-gray-400 text-sm flex-grow">
+                            Mở rộng và đào sâu kiến thức, phát triển tư duy logic, phục vụ đắc lực cho các kỳ thi học sinh giỏi và luyện thi.
+                        </p>
+                    </div>
+                    
+                    <!-- Book Set 3 -->
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-white/10 transition duration-300 fade-in delay-300 flex flex-col h-full">
+                        <div class="relative h-64 mb-6 rounded-xl overflow-hidden bg-black/20 flex items-center justify-center p-4">
+                            <img src="./assets/sach-ky-nang.jpg" alt="Sách Sống để yêu thương và phát triển" class="max-h-full max-w-full object-contain hover:scale-105 transition duration-500">
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Sống để yêu thương và phát triển</h3>
+                        <p class="text-gold-400 text-sm mb-4">Kỹ năng sống cốt lõi</p>
+                        <p class="text-gray-400 text-sm flex-grow">
+                            Trang bị những kỹ năng sống thiết yếu để thành công bền vững, giúp học viên phát triển toàn diện cả trí tuệ và tâm hồn.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activities & Life Skills Section -->
+        <section id="activities" class="py-20 bg-cream">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1 fade-in">
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Hoạt động & Kỹ năng sống</h2>
+                        <div class="w-20 h-1 bg-gold-500 mb-6 rounded-full"></div>
+                        <h3 class="text-xl text-navy-600 font-semibold mb-4">Sống để yêu thương và phát triển</h3>
+                        <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                            Thành công bền vững không chỉ đến từ điểm số, mà còn từ những giá trị sống cốt lõi. Tại LSE Center, chúng tôi chú trọng phát triển bản thân toàn diện.
+                        </p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gold-100 text-gold-600 flex items-center justify-center mt-1 mr-3">
+                                    <i class="fa-solid fa-heart text-xs"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy-900">Nuôi dưỡng lòng yêu thương</h4>
+                                    <p class="text-gray-600 text-sm">Xây dựng sự thấu cảm và trí tuệ cảm xúc.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gold-100 text-gold-600 flex items-center justify-center mt-1 mr-3">
+                                    <i class="fa-solid fa-users text-xs"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy-900">Phát triển tư duy xã hội</h4>
+                                    <p class="text-gray-600 text-sm">Kỹ năng làm việc nhóm, giao tiếp và lãnh đạo.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gold-100 text-gold-600 flex items-center justify-center mt-1 mr-3">
+                                    <i class="fa-solid fa-seedling text-xs"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy-900">Định hình giá trị cốt lõi</h4>
+                                    <p class="text-gray-600 text-sm">Trang bị nền tảng vững chắc để thích ứng và phát triển.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="order-1 lg:order-2 relative fade-in delay-200">
+                        <div class="absolute inset-0 bg-gold-500 rounded-3xl transform translate-x-4 translate-y-4 opacity-20"></div>
+                        <img src="./assets/sach-ky-nang.jpg" alt="Hoạt động kỹ năng sống" class="relative rounded-3xl shadow-xl w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Placeholder Section -->
+        <section id="team" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Đội ngũ giáo viên</h2>
+                    <div class="w-20 h-1 bg-gold-500 mx-auto mb-6 rounded-full"></div>
+                    <p class="text-gray-600 text-lg">
+                        Đội ngũ giáo viên giàu kinh nghiệm, chuyên môn cao, luôn tâm huyết và theo sát từng học sinh trên chặng đường chinh phục tri thức.
+                    </p>
+                </div>
+                
+                <!-- Placeholder for future team members -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Template Card (Currently hidden or showing general avatar) -->
+                    <div class="bg-cream rounded-2xl p-6 text-center shadow-sm border border-gray-50 fade-in delay-100">
+                        <div class="w-24 h-24 mx-auto bg-gray-200 rounded-full mb-4 flex items-center justify-center text-gray-400">
+                            <i class="fa-solid fa-user-tie text-3xl"></i>
+                        </div>
+                        <div class="h-4 bg-gray-200 rounded w-3/4 mx-auto mb-2"></div>
+                        <div class="h-3 bg-gray-200 rounded w-1/2 mx-auto mb-4"></div>
+                        <p class="text-sm text-gray-500 italic">Đang cập nhật thông tin...</p>
+                    </div>
+                    <div class="bg-cream rounded-2xl p-6 text-center shadow-sm border border-gray-50 fade-in delay-200 hidden sm:block">
+                        <div class="w-24 h-24 mx-auto bg-gray-200 rounded-full mb-4 flex items-center justify-center text-gray-400">
+                            <i class="fa-solid fa-user-tie text-3xl"></i>
+                        </div>
+                        <div class="h-4 bg-gray-200 rounded w-3/4 mx-auto mb-2"></div>
+                        <div class="h-3 bg-gray-200 rounded w-1/2 mx-auto mb-4"></div>
+                        <p class="text-sm text-gray-500 italic">Đang cập nhật thông tin...</p>
+                    </div>
+                    <div class="bg-cream rounded-2xl p-6 text-center shadow-sm border border-gray-50 fade-in delay-300 hidden lg:block">
+                        <div class="w-24 h-24 mx-auto bg-gray-200 rounded-full mb-4 flex items-center justify-center text-gray-400">
+                            <i class="fa-solid fa-user-tie text-3xl"></i>
+                        </div>
+                        <div class="h-4 bg-gray-200 rounded w-3/4 mx-auto mb-2"></div>
+                        <div class="h-3 bg-gray-200 rounded w-1/2 mx-auto mb-4"></div>
+                        <p class="text-sm text-gray-500 italic">Đang cập nhật thông tin...</p>
+                    </div>
+                    <div class="bg-cream rounded-2xl p-6 text-center shadow-sm border border-gray-50 fade-in delay-400 hidden lg:block">
+                        <div class="w-24 h-24 mx-auto bg-gray-200 rounded-full mb-4 flex items-center justify-center text-gray-400">
+                            <i class="fa-solid fa-user-tie text-3xl"></i>
+                        </div>
+                        <div class="h-4 bg-gray-200 rounded w-3/4 mx-auto mb-2"></div>
+                        <div class="h-3 bg-gray-200 rounded w-1/2 mx-auto mb-4"></div>
+                        <p class="text-sm text-gray-500 italic">Đang cập nhật thông tin...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News & Gallery Placeholder -->
+        <section id="news" class="py-20 bg-cream">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Tin tức & Sự kiện</h2>
+                    <div class="w-20 h-1 bg-gold-500 mx-auto mb-6 rounded-full"></div>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-12 text-center shadow-sm border border-gray-100 fade-in">
+                    <div class="w-20 h-20 bg-navy-50 text-navy-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-regular fa-calendar-alt text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-navy-900 mb-3">Thông tin hoạt động sẽ được cập nhật</h3>
+                    <p class="text-gray-500 max-w-lg mx-auto">
+                        Website đang trong quá trình hoàn thiện. Các bài viết, hình ảnh hoạt động và sự kiện mới nhất của LSE Center sẽ sớm được cập nhật tại đây.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration & Contact Section -->
+        <section id="contact" class="py-20 bg-white relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    
+                    <!-- Contact Info -->
+                    <div class="fade-in">
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Liên hệ với LSE</h2>
+                        <div class="w-20 h-1 bg-gold-500 mb-8 rounded-full"></div>
+                        
+                        <div class="space-y-6 mb-10">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-navy-50 rounded-full flex items-center justify-center text-navy-600 flex-shrink-0 mr-4">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy-900 mb-1">Địa chỉ</h4>
+                                    <p class="text-gray-600">422 Vĩnh Hưng, Hà Nội</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-navy-50 rounded-full flex items-center justify-center text-navy-600 flex-shrink-0 mr-4">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy-900 mb-1">Điện thoại</h4>
+                                    <a href="tel:0842962789" class="text-navy-600 font-medium hover:text-gold-500 transition">0842962789</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-navy-50 rounded-full flex items-center justify-center text-navy-600 flex-shrink-0 mr-4">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy-900 mb-1">Email</h4>
+                                    <a href="mailto:ttnt.ai.nhom7@gmail.com" class="text-navy-600 hover:text-gold-500 transition break-all">ttnt.ai.nhom7@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-4 mb-8">
+                            <a href="tel:0842962789" class="bg-navy-500 hover:bg-navy-600 text-white px-6 py-3 rounded-lg font-medium transition flex items-center">
+                                <i class="fa-solid fa-phone mr-2"></i> Gọi ngay
+                            </a>
+                            <a href="https://www.facebook.com/share/18YPJRvfnx/" target="_blank" rel="noopener noreferrer" class="bg-[#1877F2] hover:bg-[#166FE5] text-white px-6 py-3 rounded-lg font-medium transition flex items-center">
+                                <i class="fa-brands fa-facebook-f mr-2"></i> Facebook
+                            </a>
+                        </div>
+                        
+                        <!-- Map Placeholder -->
+                        <div class="w-full h-64 bg-gray-200 rounded-xl overflow-hidden relative">
+                            <div class="absolute inset-0 flex items-center justify-center flex-col text-gray-500">
+                                <i class="fa-solid fa-map text-3xl mb-2"></i>
+                                <span>Bản đồ sẽ được tích hợp sau</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Registration Form -->
+                    <div id="register" class="bg-cream p-8 md:p-10 rounded-2xl shadow-lg border border-gray-100 fade-in delay-200">
+                        <h3 class="text-2xl font-bold text-navy-900 mb-6">Đăng ký tư vấn</h3>
+                        
+                        <form id="registration-form" class="space-y-5">
+                            <div>
+                                <label for="fullname" class="block text-sm font-medium text-gray-700 mb-1">Họ và tên *</label>
+                                <input type="text" id="fullname" name="fullname" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-navy-500 focus:border-navy-500 outline-none transition" placeholder="Nhập họ và tên">
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Số điện thoại *</label>
+                                    <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-navy-500 focus:border-navy-500 outline-none transition" placeholder="09xxxxxxx">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-navy-500 focus:border-navy-500 outline-none transition" placeholder="email@example.com">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="role" class="block text-sm font-medium text-gray-700 mb-1">Bạn là *</label>
+                                <select id="role" name="role" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-navy-500 focus:border-navy-500 outline-none transition bg-white">
+                                    <option value="" disabled selected>Chọn đối tượng</option>
+                                    <option value="student">Học sinh</option>
+                                    <option value="parent">Phụ huynh</option>
+                                    <option value="university_student">Sinh viên</option>
+                                    <option value="other">Khác</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Nhu cầu tư vấn (có thể chọn nhiều)</label>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" name="needs" value="toan" class="rounded text-navy-500 focus:ring-navy-500">
+                                        <span class="text-gray-700">Toán</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" name="needs" value="van" class="rounded text-navy-500 focus:ring-navy-500">
+                                        <span class="text-gray-700">Văn</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" name="needs" value="anh" class="rounded text-navy-500 focus:ring-navy-500">
+                                        <span class="text-gray-700">Anh</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" name="needs" value="chuyen" class="rounded text-navy-500 focus:ring-navy-500">
+                                        <span class="text-gray-700">Luyện thi Chuyên</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" name="needs" value="daihoc" class="rounded text-navy-500 focus:ring-navy-500">
+                                        <span class="text-gray-700">Luyện thi Đại học</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" name="needs" value="kynang" class="rounded text-navy-500 focus:ring-navy-500">
+                                        <span class="text-gray-700">Kỹ năng sống</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Nội dung cần tư vấn</label>
+                                <textarea id="message" name="message" rows="3" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-navy-500 focus:border-navy-500 outline-none transition resize-none" placeholder="Hãy để lại lời nhắn hoặc câu hỏi của bạn..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-gold-500 hover:bg-gold-600 text-white font-bold py-3.5 px-4 rounded-lg transition shadow-md flex justify-center items-center">
+                                <span>Gửi thông tin đăng ký</span>
+                            </button>
+                            
+                            <!-- Success Message (Hidden by default) -->
+                            <div id="form-success" class="hidden mt-4 p-4 bg-green-50 text-green-700 rounded-lg border border-green-200 flex items-center">
+                                <i class="fa-solid fa-circle-check mr-2 text-xl"></i>
+                                <span>Đăng ký thành công! Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-white pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <div class="col-span-1 lg:col-span-1">
+                    <img src="./assets/logo.png" alt="LSE Logo" class="h-16 w-auto mb-6 bg-white p-2 rounded-lg">
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        LSE – Trung tâm Khai phóng và Phát triển Kỹ năng.<br>
+                        "Khai phóng tri thức – Mở cửa tương lai"
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/18YPJRvfnx/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold-500 hover:text-white transition">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 font-serif">Thông tin liên hệ</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-location-dot mt-1 mr-3 text-gold-400"></i>
+                            <span>422 Vĩnh Hưng, Hà Nội</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-phone mr-3 text-gold-400"></i>
+                            <a href="tel:0842962789" class="hover:text-gold-400 transition">0842962789</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-envelope mr-3 text-gold-400"></i>
+                            <a href="mailto:ttnt.ai.nhom7@gmail.com" class="hover:text-gold-400 transition break-all">ttnt.ai.nhom7@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 font-serif">Liên kết nhanh</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="#about" class="hover:text-gold-400 transition">Về chúng tôi</a></li>
+                        <li><a href="#programs" class="hover:text-gold-400 transition">Chương trình đào tạo</a></li>
+                        <li><a href="#materials" class="hover:text-gold-400 transition">Học liệu độc quyền</a></li>
+                        <li><a href="#team" class="hover:text-gold-400 transition">Đội ngũ giáo viên</a></li>
+                        <li><a href="#news" class="hover:text-gold-400 transition">Tin tức & Sự kiện</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 font-serif">Chương trình</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="#programs" class="hover:text-gold-400 transition">Bồi dưỡng Toán học</a></li>
+                        <li><a href="#programs" class="hover:text-gold-400 transition">Bồi dưỡng Ngữ văn</a></li>
+                        <li><a href="#programs" class="hover:text-gold-400 transition">Bồi dưỡng Tiếng Anh</a></li>
+                        <li><a href="#programs" class="hover:text-gold-400 transition">Luyện thi Chuyên / Đại học</a></li>
+                        <li><a href="#activities" class="hover:text-gold-400 transition">Phát triển kỹ năng sống</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div class="pt-8 border-t border-white/10 text-center md:flex md:justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 LSE Center. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 space-x-4">
+                    <a href="#" class="hover:text-white transition">Chính sách bảo mật</a>
+                    <a href="#" class="hover:text-white transition">Điều khoản sử dụng</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Placeholder (Floating Button) -->
+    <div id="lse-chatbot" class="fixed bottom-6 right-6 z-50">
+        <!-- Tích hợp script chatbot vào đây trong tương lai -->
+        <button id="chatbot-trigger" class="w-14 h-14 bg-navy-600 hover:bg-navy-700 text-white rounded-full shadow-xl flex items-center justify-center transition-transform hover:scale-110 focus:outline-none" aria-label="Chat with us">
+            <i class="fa-solid fa-comment-dots text-2xl"></i>
+        </button>
+        <!-- Temporary tooltip -->
+        <div id="chatbot-tooltip" class="absolute bottom-16 right-0 bg-white text-gray-800 p-3 rounded-lg shadow-lg text-sm w-48 hidden border border-gray-100">
+            Chatbot hỗ trợ đang được phát triển. Vui lòng gọi 0842962789 để được hỗ trợ nhanh nhất.
+        </div>
+    </div>
+
+    <!-- Facebook Domain Verification Meta Template (Hidden, for future reference) -->
+    <!-- <meta name="facebook-domain-verification" content="YOUR_VERIFICATION_CODE_HERE" /> -->
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
